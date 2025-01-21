@@ -1,0 +1,289 @@
+/* CSS Variables */
+:root {
+  --bodyColor: #CCE2C2;
+  --startBtnColor: #35bd3a;
+  --startBtnFontColor: #ffffff;
+  --timerColor: rgba(2, 164, 9, 0.43);
+}
+
+/* Reset and Box Sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Styles */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bodyColor);
+  font-family: "Poppins", sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+/* Container Styles */
+.container {
+  max-width: 103rem;
+  width: 100%;
+  margin-inline: auto;
+  padding: 0 2rem 2rem;
+}
+
+.container.first-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* 
+.container.second-page, .question-body {
+  background: red;
+} */
+
+/* Quiz Logo Styles */
+.quiz-logo {
+  width: 100%;
+}
+
+.quiz-logo.first {
+  max-width: 70rem;
+}
+
+.quiz-logo.second,
+.quiz-logo.result {
+  max-width: 22.2rem;
+  padding-top: 3rem;
+}
+
+/* Button Styles */
+.btn {
+  text-decoration: none;
+  background-color: var(--startBtnColor);
+  color: var(--startBtnFontColor);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#start {
+  font-size: 4.3rem;
+  padding: 2rem 6rem;
+  border-radius: 0.8rem;
+  box-shadow: 0.4rem 0.4rem 0px 0.4rem #01ab08;
+}
+
+.next-btn-container {
+  width: 100%;
+  text-align: right;
+}
+
+#next {
+  border: none;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+#next:disabled {
+  cursor: not-allowed;
+  background-color: rgba(0, 100, 0, 0.199);
+}
+
+.btn:active {
+  background-color: darkgreen;
+}
+
+#retry-btn {
+  font-size: 2rem;
+  padding: 1.2rem 5rem;
+  border-radius: 0.4rem;
+  box-shadow: 0.3rem 0.3rem 0px 0.3rem #01ab08;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  align-items: center;
+}
+
+.volume {
+  cursor: pointer;
+  padding-right: 2rem;
+  font-size: 2.5rem;
+}
+
+.sound-icon {
+  position: relative;
+  left: 15rem;
+}
+
+.ques-page-header {
+  justify-content: space-between;
+  padding: 0;
+}
+
+.result-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.2rem;
+}
+
+/* Question Styles */
+
+.question-body,
+.ques-number,
+.timer-div {
+  cursor: default;
+}
+
+.question-body {
+  background-color: var(--bodyColor);
+}
+
+.question h6 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  padding: 4rem;
+  background-color: #f5f5f5;
+  border-radius: 1rem;
+}
+
+.ques-number,
+.timer-div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  font-size: 2.5rem;
+}
+
+.timer  {
+  max-width: 10rem;
+  width: 100%;
+}
+
+.ques-number h3 {
+  background-color: #fec33d;
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.timer {
+  background-color: var(--timerColor);
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
+  margin-block: 1.5rem;
+  color: white;
+}
+
+/* Option Styles */
+.options {
+  background-color: #f5f5f5;
+  padding: 2rem 2rem 0.5rem;
+  border-radius: 1rem;
+}
+
+.options h6 {
+  cursor: pointer;
+  font-size: 2.4rem;
+  font-weight: 600;
+  padding: 1.2rem 2.5rem;
+  background-color: #f5f5f5;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  border: 0.5rem solid #d9d9d9;
+}
+
+.options h6.incorrect {
+  border-color: #ff7a7a;
+}
+
+.options h6.correct {
+  border-color: #35bd3a;
+}
+
+.disabled h6 {
+  cursor: not-allowed;
+}
+
+/* Result Page Styles */
+.result-body {
+  text-align: center;
+}
+
+.result-bar-container {
+  width: 70%;
+  background-color: #ff7a7a;
+  margin: 6rem auto 0;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.result-bar {
+  width: 0%;
+  height: 8rem;
+  background-color: #35bd3a;
+}
+
+.result-page h6 {
+  font-size: 2.8rem;
+  margin: 8rem 0 3rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+
+#score,
+#highest-score {
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+#highest-score {
+  margin-top: 8rem;
+}
+
+/* Share Section Styles */
+.share {
+  margin-top: 5rem;
+  font-size: 3rem;
+  color: #535353;
+}
+
+.share h5 {
+  font-weight: 600;
+}
+
+.icon {
+  font-size: 4rem;
+  color: #535353;
+  margin-inline: 1.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #start {
+    font-size: 3rem;
+    padding: 1.5rem 3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+
+  #start {
+    font-size: 3rem;
+    padding: 1.5rem 3rem;
+  }
+}
