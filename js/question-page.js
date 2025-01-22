@@ -156,7 +156,7 @@ function startTimer() {
     time = 0;
   } else {
     localStorage.setItem("game", "started");
-    time = 10;
+    time = 29;
   }
 
   const timerId = setInterval(() => {
